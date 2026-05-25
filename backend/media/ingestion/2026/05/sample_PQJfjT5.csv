@@ -1,0 +1,8 @@
+Employee ID,Employee Name,Trip Name,Segment Type,Origin,Destination,Departure Date,Return Date,Vendor,Class of Service,Nights,Amount,Currency,Distance (km)
+EMP-1042,Sarah Chen,Q1 Client Visit NYC,AIR,SFO,JFK,02/05/2024,02/05/2024,United Airlines,Economy,,487.00,USD,
+EMP-1042,Sarah Chen,Q1 Client Visit NYC,HOTEL,New York,New York,02/05/2024,02/07/2024,Marriott Midtown,,2,620.00,USD,
+EMP-1042,Sarah Chen,Q1 Client Visit NYC,CAR,JFK Airport,Midtown Manhattan,02/05/2024,02/05/2024,Lyft,,,45.00,USD,22
+EMP-0291,Marcus Weber,APAC Strategy Meeting,Flight,FRA,SIN,03/10/2024,03/10/2024,Lufthansa,Business Class,,4200.00,EUR,
+EMP-0291,Marcus Weber,APAC Strategy Meeting,AIR,XYZ,SIN,03/17/2024,03/17/2024,Regional Air,Economy,,380.00,SGD,
+EMP-1042,Sarah Chen,Q1 Client Visit NYC,TAXI,,,02/07/2024,02/07/2024,NYC Yellow Cab,,,38.00,USD,
+EMP-0291,Marcus Weber,APAC Strategy Meeting,HOTEL,Singapore,Singapore,03/10/2024,03/14/2024,Marina Bay Sands,,,1800.00,SGD,
