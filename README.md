@@ -94,12 +94,20 @@ App will be at `http://localhost:5173`
    ```
 5. Railway picks up `railway.toml` and runs:
    ```
-   python manage.py migrate && python manage.py seed && gunicorn breathe.wsgi
+   python manage.py migrate && python manage.py collectstatic --noinput && gunicorn breathe.wsgi
+   ```
+6. One-time demo data load (from Railway shell):
+   ```bash
+   python manage.py seed
    ```
 
 For the React frontend, either:
 - **Option A:** Serve from Django — run `npm run build` in frontend/, copy `dist/` to `backend/staticfiles/`, and configure Django to serve it
-- **Option B:** Deploy frontend separately on Vercel/Netlify, set `CORS_ALLOWED_ORIGINS` in backend env
+- **Option B (recommended):** Deploy frontend separately on Vercel/Netlify:
+  - Set frontend env var:
+    `VITE_API_BASE_URL=https://<your-railway-backend-domain>/api`
+  - Set backend env var:
+    `CORS_ALLOWED_ORIGINS=https://<your-frontend-domain>`
 
 ---
 
