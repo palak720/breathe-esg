@@ -1,0 +1,5 @@
+status,product_area,response,justification,request_type
+replied,account_access,Here’s what can help: you can reset your hackerrank password using the forgot password option,Classified as product_issue. Low risk. Relevant support doc found.,product_issue
+escalated,payments,This issue requires human support. We are escalating your request.,Classified as product_issue. High risk detected. Low retrieval confidence.,product_issue
+replied,api,Here’s what can help: claude api usage is limited by rate limits and token quotas,Classified as bug. Low risk. Relevant support doc found.,bug
+escalated,general,This issue requires human support. We are escalating your request.,Classified as feature_request. Low risk. Low retrieval confidence.,feature_request

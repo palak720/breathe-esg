@@ -1,0 +1,13 @@
+{
+  "name": "breathe-esg",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c green,cyan \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "backend\\venv\\Scripts\\python.exe backend\\manage.py runserver 127.0.0.1:8000",
+    "dev:frontend": "npm --prefix frontend run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

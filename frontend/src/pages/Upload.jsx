@@ -119,14 +119,14 @@ export default function UploadPage() {
   };
 
   return (
-    <div className="p-8 max-w-3xl">
+    <div className="p-4 md:p-8 max-w-3xl">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Upload Data</h1>
         <p className="text-sm text-gray-500 mt-1">Ingest emissions data from SAP, utility portals, or travel platforms.</p>
       </div>
 
       {/* Source type selector */}
-      <div className="grid grid-cols-3 gap-3 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
         {SOURCE_TYPES.map((s) => (
           <button
             key={s.value}
@@ -160,7 +160,7 @@ export default function UploadPage() {
         onDrop={handleDrop}
         onClick={() => fileRef.current?.click()}
         className={clsx(
-          "border-2 border-dashed rounded-xl p-10 text-center cursor-pointer transition-all",
+          "border-2 border-dashed rounded-xl p-6 md:p-10 text-center cursor-pointer transition-all",
           dragOver ? "border-brand-400 bg-brand-50" : "border-gray-300 bg-white hover:border-brand-400 hover:bg-gray-50"
         )}
       >

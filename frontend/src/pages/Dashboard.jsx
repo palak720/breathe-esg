@@ -33,14 +33,14 @@ export default function Dashboard() {
   const totalCo2e = Object.values(co2e).reduce((a, b) => a + b, 0);
 
   return (
-    <div className="p-8 max-w-5xl">
+    <div className="p-4 md:p-8 max-w-5xl">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Review Dashboard</h1>
         <p className="text-sm text-gray-500 mt-1">Emissions data waiting for analyst sign-off</p>
       </div>
 
       {/* Status cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         <StatCard label="Pending Review" value={bs.PENDING ?? 0} icon={Clock} color="bg-yellow-100 text-yellow-700" />
         <StatCard label="Flagged" value={bs.FLAGGED ?? 0} icon={AlertTriangle} color="bg-red-100 text-red-700" />
         <StatCard label="Approved" value={bs.APPROVED ?? 0} icon={CheckCircle2} color="bg-green-100 text-green-700" />

@@ -13,9 +13,40 @@ const nav = [
 export default function Layout() {
   const { user, logout } = useAuth();
   return (
-    <div className="flex h-screen overflow-hidden">
-      {/* Sidebar */}
-      <aside className="w-56 flex-none bg-brand-800 text-white flex flex-col">
+    <div className="md:flex md:h-screen md:overflow-hidden">
+      {/* Mobile top bar */}
+      <div className="md:hidden bg-brand-800 text-white border-b border-brand-700 px-4 py-3">
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="text-base font-semibold tracking-tight">Breathe ESG</div>
+            <div className="text-[11px] text-brand-200">Data Review Portal</div>
+          </div>
+          <button
+            onClick={logout}
+            className="flex items-center gap-1.5 text-xs text-brand-200 hover:text-white transition-colors"
+          >
+            <LogOut size={13} /> Sign out
+          </button>
+        </div>
+        <nav className="mt-3 flex gap-2 overflow-x-auto pb-1">
+          {nav.map(({ to, label, icon: Icon, end }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={end}
+              className={({ isActive }) => clsx(
+                "shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors",
+                isActive ? "bg-brand-700 text-white" : "text-brand-100 bg-brand-700/40"
+              )}
+            >
+              <Icon size={14} />
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
+      {/* Desktop sidebar */}
+      <aside className="hidden md:flex w-56 flex-none bg-brand-800 text-white flex-col">
         <div className="px-5 py-5 border-b border-brand-700">
           <div className="text-lg font-semibold tracking-tight">Breathe ESG</div>
           <div className="text-xs text-brand-200 mt-0.5">Data Review Portal</div>
@@ -51,7 +82,7 @@ export default function Layout() {
         </div>
       </aside>
       {/* Main */}
-      <main className="flex-1 overflow-auto bg-gray-50">
+      <main className="md:flex-1 md:overflow-auto bg-gray-50 min-h-[calc(100vh-56px)] md:min-h-0">
         <Outlet />
       </main>
     </div>

@@ -223,7 +223,7 @@ export default function ReviewPage() {
   };
 
   return (
-    <div className="p-6">
+    <div className="p-4 md:p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="text-xl font-bold text-gray-900">Review Records</h1>
@@ -267,20 +267,20 @@ export default function ReviewPage() {
           value={filters.search}
           onChange={(e) => { setFilters({ ...filters, search: e.target.value }); setPage(1); }}
           placeholder="Search vendor, description, facility…"
-          className="border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 w-64"
+          className="border border-gray-300 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 w-full sm:w-64"
         />
       </div>
 
       {/* Bulk actions */}
       {selected.size > 0 && (
-        <div className="flex items-center gap-3 mb-4 px-4 py-2.5 bg-brand-50 border border-brand-200 rounded-lg text-sm">
+        <div className="flex flex-wrap items-center gap-3 mb-4 px-4 py-2.5 bg-brand-50 border border-brand-200 rounded-lg text-sm">
           <span className="text-brand-800 font-medium">{selected.size} selected</span>
           <input
             type="text"
             value={bulkNote}
             onChange={(e) => setBulkNote(e.target.value)}
             placeholder="Bulk note (optional)"
-            className="border border-gray-300 rounded px-2 py-1 text-xs w-48"
+            className="border border-gray-300 rounded px-2 py-1 text-xs w-full sm:w-48"
           />
           <button
             onClick={() => bulkMut.mutate({ ids: [...selected], action: "approve", note: bulkNote })}
@@ -294,7 +294,7 @@ export default function ReviewPage() {
           >
             <X size={11} /> Reject all
           </button>
-          <button onClick={() => setSelected(new Set())} className="text-gray-400 hover:text-gray-700 ml-auto">
+          <button onClick={() => setSelected(new Set())} className="text-gray-400 hover:text-gray-700 sm:ml-auto">
             <X size={14} />
           </button>
         </div>
