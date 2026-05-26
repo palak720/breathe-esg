@@ -6,3 +6,4 @@ startCommand = "cd backend && python manage.py migrate && python manage.py colle
 healthcheckPath = "/admin/login/"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
+healthcheckPath = "/admin/login/"
