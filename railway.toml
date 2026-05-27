@@ -3,7 +3,6 @@ builder = "NIXPACKS"
 
 [deploy]
 startCommand = "cd backend && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn breathe.wsgi --workers 2 --bind 0.0.0.0:$PORT"
-healthcheckPath = "/admin/login/"
+healthcheckPath = "/health/"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
-healthcheckPath = "/admin/login/"
