@@ -1,0 +1,6 @@
+Account Number,Meter ID,Service Address,Billing Start Date,Billing End Date,Usage (kWh),Peak Demand (kW),Amount ($),Rate Schedule
+ACC-004821,MTR-A1023,"1 Market St, San Francisco, CA",12/17/2023,01/17/2024,142500,285,18525.00,E-19
+ACC-004821,MTR-A1023,"1 Market St, San Francisco, CA",01/17/2024,02/17/2024,138200,276,17966.00,E-19
+ACC-004821,MTR-A1023,"1 Market St, San Francisco, CA",02/17/2024,02/24/2024,32000,280,4160.00,E-19
+ACC-004821,MTR-B2041,"500 Howard St, San Francisco, CA",12/20/2023,02/05/2024,298000,410,38740.00,E-20
+ACC-004821,MTR-B2041,"500 Howard St, San Francisco, CA",02/05/2024,03/05/2024,145000,405,18850.00,E-20
